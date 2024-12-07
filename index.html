@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>年会抽奖系统</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 标题区域 -->
+        <header class="header">
+            <h1>年会抽奖系统</h1>
+        </header>
+
+        <!-- 文件上传区域 -->
+        <div class="upload-area">
+            <input type="file" id="fileInput" accept=".txt" class="file-input">
+            <label for="fileInput" class="file-label">上传名单文件</label>
+            <span id="fileName" class="file-name"></span>
+        </div>
+
+        <!-- 抽奖展示区域 -->
+        <main class="lottery-area">
+            <div class="prize-display">
+                <h2 class="prize-title">特等奖</h2>
+                <div class="lottery-box">
+                    <div id="nameDisplay" class="name-display">准备开始抽奖...</div>
+                </div>
+            </div>
+            <!-- 中奖记录区域 -->
+            <div class="winners-list">
+                <h3>中奖记录</h3>
+                <div id="winnersList"></div>
+            </div>
+        </main>
+
+        <!-- 控制区域 -->
+        <footer class="control-area">
+            <select id="prizeSelect" class="prize-select">
+                <option value="special">特等奖（1名）</option>
+                <option value="first">一等奖（3名）</option>
+                <option value="second">二等奖（5名）</option>
+                <option value="third">三等奖（10名）</option>
+            </select>
+            <button id="startBtn" class="control-btn start">开始抽奖</button>
+            <button id="resetBtn" class="control-btn reset">重置</button>
+        </footer>
+    </div>
+    <script src="js/lottery.js"></script>
+</body>
+</html> 
